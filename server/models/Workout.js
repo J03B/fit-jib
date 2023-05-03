@@ -37,6 +37,16 @@ workoutSchema.virtual('exercisesCount').get(function () {
   return this.exercises.length;
 });
 
+workoutSchema.virtual('totalSetsCount').get(function () {
+  const cnt = this.exercises.length;
+  let totSets = 0;
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    
+  }
+  return totSets;
+});
+
 const Workout = mongoose.model('Workout', workoutSchema);
 
 module.exports = Workout;

@@ -11,6 +11,7 @@ const typeDefs = gql`
   }
 
   type Program {
+    _id: ID
     name: String
     description: String
     image: String
@@ -19,6 +20,7 @@ const typeDefs = gql`
   }
 
   type Phase {
+    _id: ID
     name: String
     description: String
     position: Int
@@ -28,15 +30,18 @@ const typeDefs = gql`
   }
 
   type Workout {
+    _id: ID
     name: String
     description: String
     position: Int
     secBtwnExs: Int
     exercisesCount: Int
+    totalSetsCount: Int
     exercises: [Exercise]
   }
 
   type Exercise {
+    _id: ID
     name: String
     description: String
     position: Int
@@ -45,12 +50,12 @@ const typeDefs = gql`
     goalUnits: String
     numSets: Int
     secBtwnSets: Int
-    exercisesCount: Int
     exDatasCount: Int
     exDatas: [ExData]
   }
 
   type ExData {
+    _id: ID
     setNum: Int
     reps: Int
     weight: Int
